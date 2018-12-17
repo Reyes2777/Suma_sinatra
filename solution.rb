@@ -1,13 +1,10 @@
 require 'sinatra'
-require 'sinatra/reloader'
 
 sum = 0
 
-if development?
-    get '/' do 
-        @counter = sum
-        erb :index
-    end
+get '/' do 
+    @counter = sum
+    erb :index
 end
 
 post "/" do
